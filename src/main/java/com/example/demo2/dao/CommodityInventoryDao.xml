@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo2.dao.CommodityInventoryDao">
+
+    <resultMap type="com.example.demo2.entity.CommodityInventory" id="CommodityInventoryMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="cname" column="cname" jdbcType="VARCHAR"/>
+        <result property="inventory" column="inventory" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryByCName" resultMap="CommodityInventoryMap">
+        select
+          id, cname, inventory
+        from commodity_inventory
+        where cname = #{cname}
+    </select>
+
+    <select id="queryAll" resultMap="CommodityInventoryMap">
+        select
+          id, cname, inventory
+        from commodity_inventory
+    </select>
+
+    <update id="update"  >
+        update commodity_inventory set inventory = #{inventory}  where id = #{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,6 @@
+log:
+  info:
+    to: console
+logging:
+  level:
+    root: debug
