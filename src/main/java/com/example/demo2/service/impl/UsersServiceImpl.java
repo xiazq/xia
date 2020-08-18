@@ -10,12 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * (Users)表服务实现类
- *
- * @author makejava
- * @since 2020-07-24 20:50:00
- */
+
 @Service
 public class UsersServiceImpl implements UsersService {
 

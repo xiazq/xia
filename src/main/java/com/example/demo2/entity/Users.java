@@ -4,12 +4,7 @@ import java.io.Serializable;
 import java.sql.Blob;
 import java.util.Date;
 
-/**
- * (Users)实体类
- *
- * @author makejava
- * @since 2020-07-24 20:49:59
- */
+
 public class Users implements Serializable {
     private static final long serialVersionUID = 201591254987287689L;
 
